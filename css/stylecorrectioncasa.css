@@ -1,0 +1,375 @@
+/* style general */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* les couleurs */
+
+:root {
+    --blanc: #fff;
+    --gris-clair: #ddd;
+    --gris-transparant: rgba(0, 0, 0, 0.212);
+    --gris: rgb(155, 155, 155);
+    --gris-fonce: rgb(94, 94, 94);
+    --bleu-clair: #c1d2d9;
+    --bleu-fonce: #7bafc9;
+    --orange: orange;
+    --bleu: #59839b;
+}
+
+
+/* header */
+
+header {
+    background: url(../img/bg.jpg);
+    background-size: cover;
+    /* l'image couffre toute la partie header */
+    background-position: center;
+    /* photo interieur centrer */
+    background-repeat: no-repeat;
+    height: 90vh;
+    /* vh = view-height represente 90% de l'ecran de la personne qui est sur le site */
+}
+
+header div#navigation {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--gris-transparant);
+    align-items: center;
+}
+
+header h1 {
+    font-family: 'Ephesis', cursive;
+    color: var(--blanc);
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--blanc);
+    border-radius: 30px;
+    padding: 15px 20px;
+    /* 15px haut en bas 20px gauche a droite */
+    transition: 2s ease;
+}
+
+header nav a:last-of-type {
+    border: 2px solid var(--blanc)
+}
+
+header nav a:hover {
+    border: 1px solid var(--blanc);
+    background-color: var(--bleu-fonce);
+    color: var(--blanc);
+}
+
+header #en-tete {
+    text-align: center;
+    color: var(--blanc);
+}
+
+#en-tete h2 {
+    font-family: 'Ephesis', cursive;
+    margin: 15px 0 0 0;
+    text-transform: capitalize;
+    font-size: 5em;
+    font-weight: lighter;
+    line-height: 1em;
+}
+
+#en-tete p {
+    margin: 0;
+}
+
+
+/* recherche */
+
+#recherche {
+    height: 10vh;
+    /* remplie tous la taille  */
+    background-color: var(--bleu-clair);
+    color: var(--bleu-fonce);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#recherche p {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#recherche i {
+    font-size: 1.2em;
+}
+
+
+/* main */
+
+.conteneur {
+    width: 70%;
+    margin: auto;
+}
+
+article div {
+    border: 1px solid var(--gris-clair);
+    position: relative;
+}
+
+.prix {
+    position: absolute;
+    /* ici la position absolue est par rapport au parent le plus proche en position relative c'est a dire article div 
+    attention si on ne precise pas relative il se place par rapport o body */
+    top: 2%;
+    left: 2%;
+    background-color: var(--blanc);
+    padding: 15px 10px;
+    border: none;
+}
+
+div.texte {
+    padding: 15px;
+    border: none;
+}
+
+.texte h2 {
+    color: var(--gris-fonce);
+    font-size: 1em;
+}
+
+.texte p {
+    color: var(--gris);
+    font-size: 0.8em;
+}
+
+.more {
+    text-align: center;
+    height: 70px;
+}
+
+.more button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: transparent;
+    color: var(--bleu-fonce);
+    border: 1px solid var(--bleu-fonce);
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.more button:hover {
+    background-color: var(--bleu-fonce);
+    color: var(--blanc);
+}
+
+
+/* footer */
+
+footer {
+    background-color: var(--bleu-fonce);
+    color: var(--blanc);
+    height: fit-content;
+    /* fit-content la taille va s'adapter au contenu */
+}
+
+footer a {
+    color: var(--blanc);
+    text-decoration: none;
+}
+
+footer p {
+    line-height: 35px;
+}
+
+footer i {
+    padding-right: 25px;
+    font-size: 1.2em;
+}
+
+footer a:hover {
+    color: var(--orange);
+}
+
+footer hr {
+    color: var(--blanc);
+    background-color: var(--blanc);
+}
+
+.copyright {
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+
+/* les colonnes et rangées */
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.col-1 {
+    width: 8.33333%;
+    padding: 25px;
+}
+
+.col-2 {
+    width: 16.66666%;
+    padding: 25px;
+}
+
+.col-3 {
+    width: 25%;
+    padding: 25px;
+}
+
+.col-4 {
+    width: 33.33333%;
+    padding: 25px;
+}
+
+.col-5 {
+    width: 41.66666%;
+    padding: 25px;
+}
+
+.col-6 {
+    width: 50%;
+    padding: 25px;
+}
+
+.col-7 {
+    width: 58.33333%;
+    padding: 25px;
+}
+
+.col-8 {
+    width: 66.66666%;
+    padding: 25px;
+}
+
+.col-9 {
+    width: 75%;
+    padding: 25px;
+}
+
+.col-10 {
+    width: 83.33333%;
+    padding: 25px;
+}
+
+.col-11 {
+    width: 91.66666%;
+    padding: 25px;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+
+/* responsive */
+
+
+/* tablette */
+
+@media screen and (min-width: 768px)and (max-width: 991px) {
+    header #navigation {
+        display: flex;
+        flex-direction: column;
+        min-height: 120px;
+    }
+    h1 {
+        margin: 0;
+    }
+    #navigation a {
+        padding: 10px;
+    }
+    #navigation a:last-of-type {
+        border: none;
+    }
+    #en-tete {
+        background-color: var(--gris-transparant);
+        padding: 25px;
+    }
+    .conteneur {
+        width: 95%;
+    }
+    .col-4 {
+        width: 50%;
+    }
+    .col-2 {
+        width: 33.3333%;
+    }
+    /* on recherche le dernier impair grace a ood */
+    /* last of type le dernier element (.col-4) */
+    /* nth of type vous permet de sélectionner un ou plusieurs éléments en fonction de leur ordre 
+    verifier si odd ou impair */
+    .col-4:last-of-type:nth-of-type(odd) {
+        display: none;
+    }
+    .col-6 {
+        width: 100%;
+    }
+    #reseau {
+        text-align: center;
+    }
+}
+
+
+/* mobile */
+
+@media screen and (max-width: 767px) {
+    header #navigation {
+        display: flex;
+        flex-direction: column;
+        min-height: 120px;
+    }
+    #navigation a {
+        padding: 10px;
+    }
+    #navigation a:last-of-type {
+        border: none;
+    }
+    #en-tete {
+        background-color: var(--gris-transparant);
+    }
+    #en-tete h2 {
+        margin: 0;
+        padding-top: 25px;
+    }
+    #en-tete p {
+        padding-bottom: 25px;
+    }
+    #recherche i {
+        display: none;
+    }
+    .conteneur {
+        width: 85%;
+        text-align: center;
+    }
+    .col-4 {
+        width: 100%;
+    }
+    .col-2 {
+        width: 100%;
+    }
+    .col-6 {
+        width: 100%;
+    }
+}
